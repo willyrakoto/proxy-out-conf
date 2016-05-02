@@ -12,5 +12,5 @@ RUN chmod 777 /tmp/entrypoint.sh
 ADD conf /tmp/
 
 VOLUME /etc/squid/
-
+RUN chmod 777 /etc/squid/
 ENTRYPOINT ["/tmp/entrypoint.sh"]
