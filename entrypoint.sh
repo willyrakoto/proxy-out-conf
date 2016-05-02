@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cp -r /tmp/conf/* /etc/squid/
+cp -r /tmp/* /etc/squid/
 
 tail -f /dev/null
