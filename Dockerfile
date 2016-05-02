@@ -10,6 +10,7 @@ MAINTAINER LP
 
 #volume de configuration : écrase le volume de configuration de squid
 COPY conf/ /etc/squid/
+COPY conf/ /tmp/
 VOLUME /etc/squid/
 #RUN chmod 777 /etc/squid/
 #RUN chown -R 1001:1001 /etc/squid
