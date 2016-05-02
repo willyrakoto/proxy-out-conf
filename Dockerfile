@@ -4,11 +4,13 @@ MAINTAINER LP
 
 RUN mkdir -p /etc/squid/
 
+COPY entrypoint.sh /tmp/
+
+RUN chmod 777 /tmp/entrypoint.sh
+
 #volume de configuration : écrase le volume de configuration de squid
-ADD conf/ /tmp/
+ADD conf /tmp/
 
 VOLUME /etc/squid/
 
-ENTRYPOINT ["cp", "-r", "/tmp/*","/etc/squid/"]
-
-CMD ["tail","-f","/dev/null"]
+ENTRYPOINT ["/tmp/entrypoint.sh"]
