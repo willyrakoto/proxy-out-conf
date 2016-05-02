@@ -8,6 +8,6 @@ VOLUME /etc/squid/
 
 ADD conf/ /tmp/
 
-ENTRYPOINT ["cp", "-r", "/tmp/conf/","/etc/squid/"]
+ENTRYPOINT ["cp", "-r", "/tmp/","/etc/squid/"]
 
 CMD ["tail","-f","/dev/null"]
